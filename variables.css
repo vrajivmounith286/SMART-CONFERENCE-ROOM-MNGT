@@ -1,0 +1,117 @@
+/* ===== ORIENTBELL DESIGN SYSTEM — CSS VARIABLES ===== */
+:root {
+  /* Brand Colors */
+  --brand-orange: #E8652D;
+  --brand-orange-light: #FF8C5A;
+  --brand-orange-dark: #C24B15;
+  --brand-teal: #00B8A9;
+  --brand-teal-light: #38D9C8;
+  --brand-teal-dark: #008F83;
+
+  /* Dark Theme Palette */
+  --bg-primary: #0B0F19;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1A2236;
+  --bg-card: rgba(26, 34, 54, 0.85);
+  --bg-card-hover: rgba(35, 45, 68, 0.95);
+  --bg-glass: rgba(17, 24, 39, 0.65);
+  --bg-glass-heavy: rgba(17, 24, 39, 0.85);
+  --bg-sidebar: rgba(11, 15, 25, 0.95);
+  --bg-input: rgba(30, 41, 66, 0.8);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  /* Text */
+  --text-primary: #F0F4FC;
+  --text-secondary: #94A3C4;
+  --text-muted: #5B6B8D;
+  --text-accent: var(--brand-orange);
+  --text-inverse: #0B0F19;
+
+  /* Borders */
+  --border-color: rgba(148, 163, 196, 0.12);
+  --border-color-light: rgba(148, 163, 196, 0.06);
+  --border-color-focus: var(--brand-orange);
+  --border-radius-sm: 8px;
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-glow-orange: 0 0 24px rgba(232, 101, 45, 0.3);
+  --shadow-glow-teal: 0 0 24px rgba(0, 184, 169, 0.3);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, var(--brand-orange), var(--brand-teal));
+  --gradient-brand-soft: linear-gradient(135deg, rgba(232, 101, 45, 0.15), rgba(0, 184, 169, 0.15));
+  --gradient-dark: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+  --gradient-card: linear-gradient(145deg, rgba(26, 34, 54, 0.9), rgba(17, 24, 39, 0.7));
+  --gradient-sidebar: linear-gradient(180deg, rgba(11, 15, 25, 0.98), rgba(17, 24, 39, 0.95));
+
+  /* Status Colors */
+  --color-success: #22C55E;
+  --color-success-bg: rgba(34, 197, 94, 0.12);
+  --color-warning: #FBBF24;
+  --color-warning-bg: rgba(251, 191, 36, 0.12);
+  --color-error: #EF4444;
+  --color-error-bg: rgba(239, 68, 68, 0.12);
+  --color-info: #3B82F6;
+  --color-info-bg: rgba(59, 130, 246, 0.12);
+
+  /* Room Status */
+  --status-available: var(--color-success);
+  --status-occupied: var(--color-error);
+  --status-upcoming: var(--color-warning);
+  --status-maintenance: var(--text-muted);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.25rem;
+  --fs-4xl: 3rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --topbar-height: 70px;
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-sidebar: 100;
+  --z-topbar: 90;
+  --z-modal: 200;
+  --z-toast: 300;
+  --z-notif: 150;
+}

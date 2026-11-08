@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Check-in Kiosk — Orientbell</title>
+    <meta name="description" content="Webcam face verification check-in kiosk for conference rooms" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="kiosk.css" />
+</head>
+
+<body>
+    <div id="kiosk-app">
+        <!-- Top Bar -->
+        <header class="kiosk-header">
+            <div class="kiosk-logo">
+                <div class="kiosk-logo-icon"><i class="fas fa-building"></i></div>
+                <div>
+                    <h1>Orientbell</h1>
+                    <p>Smart Room Check-in</p>
+                </div>
+            </div>
+            <div class="kiosk-clock" id="kiosk-clock"></div>
+        </header>
+
+        <!-- Room Selection Screen -->
+        <div id="room-select-screen" class="kiosk-screen">
+            <div class="room-select-card">
+                <div class="room-select-icon"><i class="fas fa-door-open"></i></div>
+                <h2>Select Room</h2>
+                <p>Choose the conference room for this kiosk device</p>
+                <select id="room-selector" class="kiosk-select">
+                    <option value="">— Select a Room —</option>
+                </select>
+                <button class="kiosk-btn kiosk-btn-primary" id="room-confirm-btn">
+                    <i class="fas fa-check"></i> Activate Kiosk
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Kiosk Screen -->
+        <div id="kiosk-main" class="kiosk-screen hidden">
+            <div class="kiosk-grid">
+                <!-- Left: Room Info & Bookings -->
+                <div class="kiosk-left">
+                    <div class="kiosk-room-header" id="kiosk-room-info">
+                        <!-- Room name, status loaded dynamically -->
+                    </div>
+                    <div class="kiosk-section-title">
+                        <i class="fas fa-calendar-check"></i> Today's Schedule
+                    </div>
+                    <div class="kiosk-bookings" id="kiosk-bookings">
+                        <!-- Bookings loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right: Webcam & Verification -->
+                <div class="kiosk-right">
+                    <div class="kiosk-webcam-area">
+                        <div class="kiosk-webcam-frame" id="webcam-frame">
+                            <video id="kiosk-video" autoplay playsinline></video>
+                            <canvas id="kiosk-canvas"></canvas>
+                            <div class="webcam-overlay" id="webcam-overlay">
+                                <div class="face-guide"></div>
+                                <div class="webcam-status" id="webcam-status">Initializing camera...</div>
+                            </div>
+                        </div>
+                        <div class="kiosk-verification" id="kiosk-verification">
+                            <!-- Verification status -->
+                        </div>
+                        <div class="kiosk-actions" id="kiosk-actions">
+                            <button class="kiosk-btn kiosk-btn-verify" id="verify-btn" disabled>
+                                <i class="fas fa-camera"></i> Verify & Check In
+                            </button>
+                        </div>
+                        <div class="kiosk-user-select hidden" id="kiosk-user-select">
+                            <h3><i class="fas fa-user"></i> Select Your Name</h3>
+                            <div id="kiosk-attendee-list" class="kiosk-attendee-list">
+                                <!-- Attendee buttons rendered dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Overlay -->
+        <div class="kiosk-success-overlay hidden" id="success-overlay">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 id="success-name">Welcome!</h2>
+                <p id="success-message">You have been checked in successfully</p>
+                <div class="success-details" id="success-details"></div>
+            </div>
+        </div>
+
+        <!-- Toast container -->
+        <div id="kiosk-toast-container" class="kiosk-toast-container"></div>
+    </div>
+
+    <script type="module" src="kiosk.js"></script>
+</body>
+
+</html>

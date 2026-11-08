@@ -1,0 +1,19 @@
+{
+  "name": "smart-conference-room-management",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Smart Conference Room Management System for Orientbell Limited",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "firebase": "^12.10.0"
+  }
+}

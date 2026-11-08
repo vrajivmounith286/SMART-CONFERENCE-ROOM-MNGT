@@ -1,0 +1,18 @@
+# Dependencies — Vercel installs these automatically
+node_modules/
+
+# Build output — Vercel builds this automatically
+dist/
+
+# Environment files — never upload secrets
+.env
+.env.local
+.env.production
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
